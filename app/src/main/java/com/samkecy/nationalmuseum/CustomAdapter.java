@@ -13,16 +13,18 @@ import android.widget.Toast;
 
 
 public class CustomAdapter extends BaseAdapter {
-String namy;
+    String namy;
     TextView name;
-String  values;
+    String values;
 
     Context context;
+    // use array lists instead
     int[] images;
+    // use array lists instead
     String[] names;
     LayoutInflater layoutInflater;
 
-    public CustomAdapter(Context applicationContext, String[] names, int[] images) {
+    CustomAdapter(Context applicationContext, String[] names, int[] images) {
 
         this.context = applicationContext;
         this.images = images;
@@ -39,23 +41,33 @@ String  values;
 
     @Override
     public Object getItem(int i) {
-        return null;
+        // return the position
+        // of the item in the adapter
+        return names[i];
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+
+        return i;
     }
 
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
 
-        view = layoutInflater.inflate(R.layout.list_items, null);
-         name = (TextView) view.findViewById(R.id.tvArtName);
-        ImageView image = (ImageView) view.findViewById(R.id.imgArt);
-        name.setText(names[position]);
-        image.setImageResource(images[position]);
-       values = name.getText().toString();
+        if (view == null) {
+            view = layoutInflater.inflate(R.layout.list_items, null);
+
+            // get references to the texts and images
+            name = view.findViewById(R.id.tvArtName);
+            ImageView image = view.findViewById(R.id.imgArt);
+
+            // set the values
+            name.setText(names[position]);
+            image.setImageResource(images[position]);
+            values = name.getText().toString();
+        }
+
 
 
 
