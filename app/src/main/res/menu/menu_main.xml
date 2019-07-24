@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.samkecy.nationalmuseum.MainActivity">
+    <item
+        android:id="@+id/action_rate"
+        android:orderInCategory="100"
+        android:title= "Rate Us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="About Project"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="Share App"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_FeedBack"
+        android:orderInCategory="100"
+        android:title="FeedBack"
+        app:showAsAction="never" />
+</menu>
