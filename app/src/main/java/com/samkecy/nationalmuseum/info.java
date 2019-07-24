@@ -11,13 +11,8 @@ public class info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-
-
-        String val = getIntent().getExtras().get("value").toString();
-
-       Toast.makeText(getBaseContext(), "values click " + val,Toast.LENGTH_LONG).show();
-
-
+        String val = getIntent().getExtras().get("values").toString();
+        Toast.makeText(getBaseContext(), "values click " + val, Toast.LENGTH_LONG).show();
 
     }
 }
